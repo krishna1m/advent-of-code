@@ -117,7 +117,7 @@ defmodule Day2 do
 
   def main do
     Day2.start_link()
-    stream = File.stream!("input")
+    stream = File.stream!("resources/day2/input")
     red_count = 12
     green_count = 13
     blue_count = 14
@@ -127,8 +127,8 @@ defmodule Day2 do
       Day2.update(game_valid, game_power_set)
     end)
     {id_sum_total, total_power_set} = Day2.current_value()
-    IO.inspect "solution 1: #{id_sum_total}"
-    IO.inspect "solution 2: #{total_power_set}"
+    IO.inspect "part 1: #{id_sum_total}"
+    IO.inspect "part 2: #{total_power_set}"
     Day2.stop()
   end
 end

@@ -108,7 +108,7 @@ defmodule Day1 do
 
   def main do
     Day1.start_link()
-    stream = File.stream!("input")
+    stream = File.stream!("resources/day1/input")
     stream |> Enum.each(fn line -> 
       line = line |> String.trim_trailing
       line_result = process_single_line(line)
